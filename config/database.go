@@ -39,7 +39,7 @@ func ConnectDB() {
 	// Ping the database
 	err = client.Ping(ctx, nil)
 	if err != nil {
-		log.Fatal("❌ Could not ping MongoDB:", err)
+		log.Fatal("Could not ping MongoDB:", err)
 	}
 
 	fmt.Println("Connected to MongoDB Successfully!")
@@ -62,7 +62,7 @@ func DisconnectDB() {
 		defer cancel()
 
 		if err := DB.Disconnect(ctx); err != nil {
-			log.Fatal("❌ Error disconnecting from MongoDB:", err)
+			log.Fatal(" Error disconnecting from MongoDB:", err)
 		}
 		fmt.Println("Disconnected from MongoDB")
 	}
